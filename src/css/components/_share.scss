@@ -1,0 +1,31 @@
+.share{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 4.1rem 0;
+
+    @include respondmax(sm){
+        justify-content: flex-start;
+    }
+
+    span{
+        @include font($im,1.8rem, #222D35,150%);
+   
+        margin-right: 2.8rem;
+    }
+
+    a{
+        color: #222D35;
+        font-size: 2rem;
+        transition: all .3s ease-in-out;
+
+        &:hover{
+            color: $secondary-color;
+        }
+
+        &:not(:last-child){
+            margin-right: 1.6rem;
+        }
+    }
+}

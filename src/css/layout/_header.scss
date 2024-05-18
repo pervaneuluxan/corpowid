@@ -1,3 +1,63 @@
 .header{
-	
+	padding: 2.6rem 0;
+    background: #fff;
+    transition: all .3s ease-in-out;
+
+    .col-lg-12{
+        display: flex;
+        align-items: center;
+
+        @include respondmax(xl){
+            justify-content: space-between;
+        }
+    }
+
+    &__logo{
+        width: 18.4rem;
+
+        @include respondmax(lg){
+            width: 15rem;
+        }
+
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+
+    &__right{
+        display: flex;
+        align-items: center;
+
+        @include respondmax(xl){
+            flex-direction: column;
+            margin-top: 3.2rem;
+        }
+    }
+
+    &.sticky{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: rgba($color: #fff, $alpha: .9);
+        z-index: 2000;
+        padding: 1.6rem 0;
+    }
+
+    .button-secondary{
+        background-color: $triary-color;
+        border-color: $triary-color;
+        margin-right: 1rem;
+
+        @include respondmax(lg){
+            margin-right: 0;
+        }
+
+        &:hover{
+            background-color: $secondary-color;
+            border-color: $secondary-color;
+        }
+    }
+    
 }

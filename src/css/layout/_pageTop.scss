@@ -1,0 +1,60 @@
+.pageTop{
+    height: 40.1rem;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+   
+
+    &-blog{
+        background-image: url('../../img/blog-top.png');
+    }
+
+    &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%);
+        z-index: 1;
+    }
+
+    .container{
+        height: 100%;
+    }
+  
+    .row{
+        height: 100%;
+    }
+
+    .col-lg-12{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        height: 100%
+    }
+
+    h1{
+        @include font($ibl,4rem,#fff,120%);
+        text-align: center;
+        margin-bottom: 1.6rem;
+
+        @include respondmax(lg){
+            font-size: 2.8rem;
+        }
+    }
+    p{
+        @include font($im,1.8rem,#fff,160%);
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+
+}

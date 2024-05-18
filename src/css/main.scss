@@ -4,18 +4,60 @@
 @import "abstracts/mixin";
 @import "abstracts/variables";
 
+@import "base/animations";;
 @import "base/base";
 @import "base/typography";
 @import "base/utilities";
 @import "base/fonts";
 
 @import "components/button"; 
+@import "components/banner";
+@import "components/menuBtn";
+@import "components/langMenu";
+@import "components/colorpicker";
+@import "components/colorBox";
+@import "components/contactBox";
+@import "components/infoItem";
+@import "components/accordion";
+@import "components/item";
+@import "components/offerModal";
+@import "components/menuBtn";
+@import "components/flickity-page-dots";
+@import "components/fixedBanner";
+@import "components/blogItem";
+@import "components/featureItem";
+@import "components/teamItem";
+@import "components/share";
 
 @import "layout/footer";
 @import "layout/header";
 @import "layout/navigation";
+@import "layout/colorSection";
+@import "layout/aboutSection";
+@import "layout/priceSection";
+@import "layout/toolSection";
+@import "layout/partnerSection";
+@import "layout/imgBlock";
+@import "layout/featureSection";
+@import "layout/aboutTop";
+@import "layout/videoSection";
+@import "layout/mainSlider";
+@import "layout/featureGridSection";
+@import "layout/langSection";
+@import "layout/pageTop";
+@import "layout/featureSlider";
+@import "layout/widget";
 
 @import "pages/contact";
+@import "pages/price";
+@import "pages/faq";
+@import "pages/presentation";
+@import "pages/formPage";
+@import "pages/thankYouPage";
+@import "pages/blog";
+@import "pages/blog-detail";
+@import "pages/features";
+@import "pages/team";
 
 
 

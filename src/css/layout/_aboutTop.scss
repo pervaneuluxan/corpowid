@@ -1,0 +1,98 @@
+.aboutTop{
+    padding: 7.5rem 0;
+    padding-bottom: 45rem;
+    background-image: url('../../img/contact-form-bcg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+    @include respondmax(lg){
+        padding-top: 5.9rem;
+        padding-bottom: 5.9rem;
+    }
+
+    .page-title{
+        max-width: 50rem;
+
+        @include respondmax(lg){
+            max-width: 100%;
+        }
+    }
+
+
+    .col-lg-6:first-child{
+        padding-top: 11rem;
+
+        @include respondmax(lg){
+            padding-top: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 4.4rem;
+        }
+    }
+
+    &__img{
+        position: relative;
+        width: 56rem;
+        height: 56rem;
+
+        @include respondmax(lg){
+            width: 100%;
+            height: auto;
+        }
+
+        &Big{
+
+            @include respondmax(lg){
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+    }
+
+  
+    &__img1,&__img2{
+        position: absolute;
+       
+
+        @include respondmax(lg){
+            display: none;
+        }
+    }
+
+    img{
+        &:nth-child(2),
+        &:nth-child(3){
+            background: transparent!important;
+        }
+    }
+    
+    
+
+    &__img1{
+        left: -2rem;
+        bottom: -8rem;
+        animation: move 4.4s ease-in-out infinite;
+        background-color: transparent!important;
+    }
+    &__img2{
+        right: 1rem;
+        bottom: -1rem;
+        animation: move 4.4s 2s ease-in-out infinite;
+        background-color: transparent!important;
+    }
+    p{
+        @include font($im,1.6rem,#000,160%);
+        max-width: 47.8rem;
+        margin-bottom: 0;
+
+        @include respondmax(lg){
+            text-align: center;
+        }
+    }
+
+
+}

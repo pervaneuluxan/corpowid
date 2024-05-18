@@ -1,0 +1,153 @@
+.thankYouPage{
+    background: $primary-color;
+
+    .container,.row{
+        height: 100%;
+    }
+
+    h1{
+        color: #fff;
+
+        span{
+            color: #fff;
+        }
+    }
+
+    &__bottom{
+        display: flex;
+        padding-bottom: 7.6rem;
+        position: relative;
+
+        @include respondmax(lg){
+            flex-direction: column;
+        }
+    }
+
+    &__left{
+        width: 60%;
+        padding-right: 5rem;
+
+        &.full{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .links{
+                position: relative;
+                margin-bottom: 7rem;
+            }
+
+            h1{
+                margin-bottom: 7rem;
+            }
+
+            p{
+                max-width: 50%;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+
+                @include respondmax(lg){
+                    max-width: 100%;
+                }
+            }
+
+        }
+
+        @include respondmax(lg){
+            order: 2;
+            width: 100%;
+            padding-right: 0;
+        }
+
+        h2{
+            @include font($ism,3.2rem,#fff,normal);
+            margin-bottom: 2.2rem;
+
+            @include respondmax(md){
+                font-size: 2.8rem;
+            }
+           
+        }
+        p{
+            @include font($ir,1.6rem,#fff,130%);
+
+            &:not(:last-child){
+                margin-bottom: 2rem;
+            }
+        }
+
+        a{
+            @include font($ir,1.6rem,#fff,130%);
+            transition: all .3s ease-in-out;
+
+            &:not(:last-child){
+                margin-right: 1.5rem;
+            }
+
+            &:hover{
+                color: $secondary-color;
+            }
+                  
+
+        }
+        .links{
+            margin-top: 6rem;
+            position: absolute;
+            bottom: 3rem;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include respondmax(lg){
+                margin-top: 4rem;
+                bottom: 5rem;
+                width: auto;
+            }
+            a{
+                @include font($ism,1.6rem,#fff,130%);
+                transition: all .3s ease-in-out;
+
+                &:hover{
+                    color: $secondary-color;
+                }
+
+                &:not(:last-child){
+                    margin-right: 1.5rem;
+                }
+            }
+        }
+    }
+    &__right{
+        width: 40%;
+        padding-bottom: 3rem;
+        padding-left: 5rem;
+
+
+        @include respondmax(lg){
+            width: 100%;
+            order: 1;
+            padding-left: 0;
+        }
+
+        .videoBox{
+            border:2px solid #00A3FF;
+            border-radius: 1.5rem;
+            height: 100%;
+            width: 100%;
+
+            @include respondmax(lg){
+                height: 35rem;
+                margin: 4rem 0;
+            }
+
+            @include respondmax(sm){
+                height: 25rem;
+                margin: 3rem 0;
+            }
+        }
+    }
+}

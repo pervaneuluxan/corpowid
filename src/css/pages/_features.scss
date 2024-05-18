@@ -1,0 +1,36 @@
+.features{
+
+    background-image: url('../../img/featureSlider_bcg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+    .col-lg-3{
+        margin-bottom: 3.4rem;
+        display: flex;
+        justify-content: center;
+
+        @include respondmax(lg){
+            margin-bottom: 2.4rem;
+        }
+
+      
+    }
+
+    .container{
+        @include respondmin(xl){
+            max-width: 1305px;
+            width: 1305px;
+        }
+    }
+
+    .featureItem{
+        height: 100%;
+        width: 95%;
+
+        @include respondmax(lg){
+            width: 100%;
+        }
+    }
+}

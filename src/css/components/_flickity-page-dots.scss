@@ -1,0 +1,30 @@
+.flickity-page-dots{
+    flex-direction: column;
+    bottom: auto;
+    top: 13%;
+    right: -2rem;
+    width: auto;
+    display: none;
+
+    @include respondmax(lg){
+        flex-direction: row;
+        bottom: -3rem;
+        top: auto;
+        right: auto;
+        width: 100%;
+        display: flex;
+    }
+
+    .flickity-page-dot{
+        background-color: $triary-color;
+        opacity: .5;
+        transition: all .3s ease-in-out;
+        margin-bottom: 15px;
+
+        &.is-selected{
+            background-color: $triary-color;
+            opacity: 1;
+            transform: scale(1.3);
+        }
+    }
+}

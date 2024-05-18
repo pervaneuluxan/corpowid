@@ -1,0 +1,44 @@
+.contactBox{
+    position: relative;
+    z-index: 2;
+    border-radius: 2.4rem;
+    padding: 3.2rem;
+    border: 1px solid #EAEAEA;
+    background: #FFF;
+    box-shadow: 0px 12px 26px 0px rgba(0, 0, 0, 0.10), 0px 46px 46px 0px rgba(0, 0, 0, 0.09), 0px 104px 63px 0px rgba(0, 0, 0, 0.05), 0px 186px 74px 0px rgba(0, 0, 0, 0.01), 0px 290px 81px 0px rgba(0, 0, 0, 0.00);
+
+    .form{
+       
+        &-group{
+            &:not(:last-child){
+                margin-bottom: 1.8rem;
+            }
+
+        }
+        &-control{
+            border-radius: 4px;
+            background: #F9F9F9;
+            border: unset;
+            outline: unset;
+            padding: 1.4rem 1.6rem;
+            @include font($im,1.4rem,#62666B,150%);
+        }
+
+    }
+    label{
+        @include font($im,1.4rem,#11023B,150%);
+        margin-bottom: 1.2rem;
+
+        span{
+            color: #BF8EFF;
+        }
+    }
+    textarea{
+        height: 12rem;
+        resize: none;
+    }
+    .button{
+        width: 100%;
+        margin-top: 1.4rem;
+    }
+}

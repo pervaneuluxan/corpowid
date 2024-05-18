@@ -1,6 +1,10 @@
 *{
 	box-sizing: inherit;
 }
+
+*::after{
+	box-sizing: border-box;
+}
 html{
 	width: 100%;
 	height: 100%;
@@ -27,6 +31,34 @@ html{
 body{
 	width: 100%;
 	box-sizing: border-box;
+	overflow-x: hidden;
+
+	&.no-scroll{
+		overflow-y: hidden;
+	}
 
 }
 
+
+
+.container{
+	@include respondmin(xl){
+		max-width: 1300px;
+		width: 1300px;
+	}
+}
+
+a,span{
+	display: inline-block;
+}
+
+a{
+	text-decoration: none;
+}
+
+.col-lg-6,.col-lg-4,.col-lg-12,.col-lg-9,.col-lg-3{
+	@include respondmax(lg){
+		padding-right: 1.6rem;
+		padding-left: 1.6rem;
+	}
+}

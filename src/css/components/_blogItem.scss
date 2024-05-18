@@ -1,0 +1,104 @@
+.blogItem{
+    width: 100%;
+    height: 100%;
+    border-radius: 3.2rem;
+    border: 1px solid #F2F2F2;
+    box-shadow: 0px 17px 25px 0px rgba(0, 0, 0, 0.08);
+    padding: 1.6rem;
+    padding-bottom: 2.4rem;
+    z-index: 10;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+    background: #fff;
+    position: relative;
+
+   
+    &__link{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+    }
+
+    &:hover{
+        background: $primary-color;
+    }
+
+    &__img{
+        width: 100%;
+        height: 20rem;
+        position: relative;
+        border-radius: 1.6rem;
+        overflow: hidden;
+        margin-bottom: 1.6rem;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__type{
+        position: absolute;
+        top: 1.4rem;
+        left: 1.4rem;
+        border-radius: 4rem;
+        background: $primary-color;
+        @include font($im,1.2rem,#fff,160%);
+        text-transform: uppercase;
+        padding: .4rem 1.6rem;
+    }
+    &__date{
+        @include font($im,1.4rem,#000,170%);
+        letter-spacing: 1.4px;
+        margin-bottom: 1.2rem;
+        transition: all .4s ease-in-out;
+    }
+    &__title{
+        @include font($ib,2rem,#000,150%);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+        margin-bottom: .8rem;
+        transition: all .4s ease-in-out;
+    }
+    p{
+        @include font($ir,1.8rem,#000,160%);
+        margin-bottom: 0;
+        transition: all .4s ease-in-out;
+    }
+
+    &__btn{
+        @include font($ir,1.6rem,#676767,140%);
+        width: 100%;
+        text-align: center;
+        opacity: .5;
+        margin-top: 4rem;
+        transition: all .4s ease-in-out;
+
+        svg{
+            path{
+                transition: all .4s ease-in-out;
+                stroke:#676767;
+            }
+        }
+    }
+
+    &:hover &__btn{
+        opacity: 1;
+
+        svg{
+            path{
+                stroke: #fff;
+            }
+        }
+    }
+
+    &:hover &__title,&:hover &__date,&:hover p,&:hover &__btn{
+        color: #fff;
+    }
+}

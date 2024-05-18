@@ -1,0 +1,32 @@
+.team{
+
+    .button{
+        margin-top: 4rem;
+    }
+
+    .col-lg-4{
+        margin-bottom: 9.3rem;
+        display: flex;
+        justify-content: center;
+
+        @include respondmax(lg){
+            margin-bottom: 3rem;
+        }
+    }
+
+    .container{
+        @include respondmin(xl){
+            max-width: 1250px;
+            width: 1250px;
+        }
+    }
+
+    .teamItem{
+        height: 100%;
+        width: 95%;
+
+        @include respondmax(lg){
+            width: 100%;
+        }
+    }
+}

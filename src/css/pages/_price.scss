@@ -1,0 +1,16 @@
+.price{
+    margin-bottom: 0;
+  
+
+    @include respondmax(lg){
+        margin-bottom: 0;
+    }
+
+    &Page{
+        border-bottom: 1px solid rgba(255,255,255,.09);
+        background: #08174d;
+    }
+    &Info{
+        padding: 7rem 0;
+    }
+}

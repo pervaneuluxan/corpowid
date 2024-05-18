@@ -1,0 +1,28 @@
+.banner{
+    background: #E5EBFF;
+    padding: 1.25rem 0;
+    transition: all .3s ease-in-out;
+
+    &.sticky{
+        padding: 0;
+    }
+
+    @include respondmax(lg){
+        display: none;
+    }
+
+    .col-lg-12{
+        display: flex;
+        justify-content: center;
+    }
+
+    a{
+        @include font($im,1.2rem,#262556,normal);
+        letter-spacing: 0.6px;
+
+
+        img{
+            margin-right: 1.2rem;
+        }
+    }
+}

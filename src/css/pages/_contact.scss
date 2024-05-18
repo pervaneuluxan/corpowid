@@ -1,3 +1,126 @@
 .contact {
+
+    &Form{
+        padding: 7.5rem 0;
+        padding-bottom: 45rem;
+        background-image: url('../../img/contact-form-bcg.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @include respondmax(lg){
+            padding-top: 5.9rem;
+            padding-bottom: 5.9rem;
+        }
+
+        &.free{
+            padding-bottom: 10rem;
+        }
+
+        .row{
+            align-items: center;
+        }
+
+        .col-lg-6:first-child{
+            @include respondmax(lg){
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .page-title{
+            max-width: 50rem;
+
+            @include respondmax(lg){
+                max-width: 100%;
+            }
+        }
+
+        p{
+            @include font($im,1.6rem,#000,160%);
+            max-width: 47.8rem;
+            margin-bottom: 0;
+
+            @include respondmax(lg){
+                text-align: center;
+            }
+        }
+
+        ul{
+            li{
+                @include font($im,1.6rem,#000,160%);
+                max-width: 47.8rem;
+                margin-bottom: 0;
+
+                @include respondmax(lg){
+                    text-align: center;
+                } 
+            }
+        }
+
+        &__right{
+            position: relative;
+            padding-right: 5rem;
+
+            @include respondmax(lg){
+                padding-right: 0;
+                padding-top: 4.4rem;
+            }
+
+            img{
+                position: absolute;
+                z-index: 1;
+
+                @include respondmax(lg){
+                    display: none;
+                }
+            }
+            .contactImg-1{
+                left: -28%;
+                bottom: 30%;
+                background: transparent!important;
+            }
+            .contactImg-2{
+                right: -10%;
+                bottom: 0%;
+                background: transparent!important;
+            }
+        }
+    }
+
+    &Info{
+        margin-top: -25rem;
+        padding-bottom: 15rem;
+
+        @include respondmax(lg){
+            margin-top: 0;
+            padding-bottom: 6rem;
+        }
+
+        .col-lg-12{
+            padding-bottom: 4.8rem;
+        }
+
+        .col-lg-4{
+            padding-left: 1.2rem;
+            padding-right: 1.2rem;
+
+            @include respondmax(lg){
+                margin-bottom: 2.4rem;
+            }
+        }
+    }
+
+    &Faq{
+        padding-bottom: 7rem;
+        .col-lg-12{
+            padding-bottom: 8rem;
+
+            @include respondmax(lg){
+                padding-bottom: 3.2rem;
+            }
+        }
+    }
 }
 

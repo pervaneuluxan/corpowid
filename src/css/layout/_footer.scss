@@ -1,3 +1,169 @@
 .footer{
-	
+	background: $secondary-color;
+    padding-top: 6.9rem;
+    padding-bottom: 3.57rem;
+
+    &__logo{
+
+        img{
+            width: 18.4rem;
+            object-fit: cover;
+            margin-left: -9px;
+        }
+    }
+
+    &__list{
+        padding-top: 1rem;
+    }
+
+    .col-lg-8{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        @include respondmax(lg){
+            align-items: center;
+        }
+    }
+
+    &__top{
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+        padding-bottom: 3.2rem;
+
+        @include respondmax(lg){
+            text-align: center;
+        }
+        p{
+            @include font($ir,1.6rem,#fff,150%);
+            margin-bottom: 2.4rem;
+
+            &:not(:last-child){
+                margin-bottom: 5rem;
+            }
+
+            span{
+                @include font($ism,1.6rem,#fff,150%);
+            }
+
+            a{
+                @include font($im,1.6rem,#fff,150%);
+            }
+        }
+
+        .col-lg-4{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            @include respondmax(lg){
+                justify-content: center;
+                align-items: center;
+            }
+
+            img{
+                &:not(:last-child){
+                    margin-right: 2rem;
+                }
+            }
+        }
+    }
+
+    &__link{
+        @include font($im,1.6rem,#fff,normal);
+        transition: all .3s ease-in-out;
+
+        &:hover{
+            color: $primary-color;
+        }
+
+        @include respondmax(lg){
+            display: block;
+            text-align: center;
+        }
+
+        &:not(:last-child){
+            margin-right: 1.8rem;
+
+            @include respondmax(lg){
+                margin-right: 0;
+                margin-bottom: 1.8rem;
+            }
+        }
+    }
+
+    &__bottom{
+        padding-top: 3.7rem;
+
+        .col-lg-12{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @include respondmax(lg){
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+
+    .copyright{
+        @include font($im,1.4rem,#fff,150%);
+    }
+
+    &__social{
+        display: flex;
+        align-items: center;
+
+        @include respondmax(lg){
+            flex-direction: column;
+        }
+        a{
+            transition: all .3s ease-in-out;
+            color: #fff;
+            font-size: 2rem;
+
+            &:hover{
+                opacity: .7;
+            }
+
+            @include respondmax(lg){
+                display:inline-block ;
+            }
+
+            img{
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        span{
+            @include font($im,1.4rem,#fff,150%);
+            margin-right: 2.3rem;
+
+           
+        }
+    }
+
+    .button{
+        margin-top: 3.2rem;
+    }
+
+    .button-secondary{
+        background-color: $triary-color;
+        border-color: $triary-color;
+        margin-right: 1rem;
+
+        @include respondmax(lg){
+            margin-right: 0;
+            display: block;
+        }
+
+        &:hover{
+            background-color: $secondary-color;
+            border-color: $secondary-color;
+        }
+    }
 }

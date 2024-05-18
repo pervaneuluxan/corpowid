@@ -1,0 +1,119 @@
+.offerModal{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 20000000;
+    pointer-events: none;
+    transition: all .2s linear;   
+    opacity: 0;
+   
+
+    &.active{
+        background: rgba(255,255,255,.9);
+        pointer-events: all;
+        opacity: 1;
+    }
+
+    &__center{
+        @include absCenter;
+        width: 70%;
+        display: none;
+        display: flex;
+        height: 69rem;
+        
+
+        @include respondmax(lg){
+            padding-top: 3rem;
+            background-color: #fff;
+            border-radius: 2.4rem;
+            height: auto;
+            width: 95%;
+            flex-direction: column;
+        }
+
+        .videoBox{
+            width: 50%;
+            height: 100%;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            border-top-left-radius: 2.4rem;
+            border-bottom-left-radius: 2.4rem;
+
+            @include respondmax(lg){
+                display: none;
+                width: 100%;
+                height: auto;
+                border-top-right-radius: 2.4rem;
+                border-bottom-left-radius: 0;
+
+                
+            }
+        }
+        .contactBox{
+            width: 50%;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+
+            @include respondmax(lg){
+                position: static;
+                width: 100%;
+                height: auto;
+                border-top-right-radius: 0;
+                border-bottom-left-radius: 2.4rem;
+                
+            }
+        }
+
+        @include respondmax(sm){
+            width: 95%;
+        }
+    }
+
+    &.active &__center{
+        visibility: visible;
+        opacity: 1;
+        transform: scaleX(1) translate(-50%,-50%);
+    }
+    &__close{
+        position: absolute;
+        right: 2rem;
+        top: .7rem;
+        color: #CFCFCF;
+        font-size: 2.5rem;
+        transition: all .2s linear;
+
+        @include respondmax(lg){
+            top: 0;
+        }
+        
+        &:hover{
+            color: $primary-color;
+        }
+    }
+
+    &.videoModal{
+        .videoBox{
+            width: 100%;
+            border-radius: 2.4rem;
+        }
+
+        .offerModal__close{
+            right: -3rem;
+            top: -3rem;
+            color: #000;
+        }
+    }
+}
+#video2{
+    border-radius:2.4rem;
+}
+
+.form-field-error-label{
+    position:absolute;
+    color:red;
+    font-size:1.4rem;
+}

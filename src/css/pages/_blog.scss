@@ -1,0 +1,42 @@
+.blog{
+    padding-top: 12rem;
+    padding-bottom: 10rem;
+    background-image: url('../../img/contact-form-bcg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+  
+
+    @include respondmax(lg){
+        padding-top: 5.9rem;
+        padding-bottom: 1.9rem;
+    }
+
+    .section-top{
+        padding-bottom: 4.4rem;
+
+        @include respondmax(lg){
+            padding-bottom: 4.4rem;
+        }
+    }
+    .col-lg-4{
+        margin-bottom: 4rem;
+
+        @include respondmax(lg){
+            margin-bottom: 2.4rem;
+        }
+    }
+
+    &Section{
+        background-image: unset;
+        padding-top: 0;
+
+        @include respondmax(lg){
+            padding-bottom: 4.4rem;
+        }
+
+        .section-top{
+            padding-bottom: 4.4rem;
+        }
+    }
+}

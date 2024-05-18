@@ -1,0 +1,91 @@
+.colorBox{
+    border-radius: 2.4rem;
+    border: 1px solid #E9E9E9;
+    background: #FFF;
+    padding: 1.6rem;
+    margin-left: 6.5rem;
+    margin-right: 6.5rem;
+    height: 48.1rem;
+    overflow: hidden;
+    width: 80%;
+    box-shadow: 0px 10px 21px 0px rgba(0, 0, 0, 0.10), 0px 39px 39px 0px rgba(0, 0, 0, 0.09), 0px 87px 52px 0px rgba(0, 0, 0, 0.05), 0px 155px 62px 0px rgba(0, 0, 0, 0.01), 0px 243px 68px 0px rgba(0, 0, 0, 0.00);
+
+   @include respondmax(lg){
+    margin-left: 0;
+    margin-right: 0;
+    width:85%;
+    margin-right: 2rem;
+    margin-bottom: 4rem;
+    height: 44rem;
+   }
+
+    &__top{
+        position: absolute;
+        border-radius: 3.2rem;
+        border: 1px solid rgba(255, 255, 255, 0.38);
+        background: $primary-color;
+        box-shadow: 5px 4px 13px 0px rgba(0, 0, 0, 0.10), 20px 14px 25px 0px rgba(0, 0, 0, 0.09), 45px 32px 33px 0px rgba(0, 0, 0, 0.05), 
+        80px 57px 39px 0px rgba(0, 0, 0, 0.01), 125px 89px 43px 0px rgba(0, 0, 0, 0.00);
+        padding: 1.6rem 2rem;
+        text-align: center;
+        @include font($im,1.6rem,#fff,normal);
+        text-transform: capitalize;
+        left: 0;
+        width: 80%;
+        top: 1.6rem;
+
+        img{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 2rem;
+        }
+    }
+
+    &__main{
+        padding-top: 7.9rem;
+        display: flex;
+        flex-wrap: wrap;
+
+        .item{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 2.4rem;
+            border: 2px solid rgba(54, 54, 54, 0.10);
+            background: #FFF;
+            margin-bottom: 1.6rem;
+            width: calc((100% - 1.6rem) / 2);
+            padding: 3.2rem;
+            text-align: center;
+
+            @include respondmax(lg){
+                padding: 2rem;
+            }
+            
+            &:not(:nth-child(2n)){
+                margin-right: 1.6rem;
+              
+            }
+
+            .icon{
+                border-radius: 1.3rem;
+                border: 1px solid #EAE9F5;
+                background: #FFF;
+                padding: 1.1rem 1.258rem;
+                width: 6.5rem;
+                height: 6.2rem;
+                box-shadow: 0px 1px 1px 0px rgba(120, 120, 120, 0.10), 0px 2px 2px 0px rgba(120, 120, 120, 0.09), 0px 5px 3px 0px rgba(120, 120, 120, 0.05), 0px 10px 4px 0px rgba(120, 120, 120, 0.01), 0px 15px 4px 0px rgba(120, 120, 120, 0.00);
+            }
+
+            .color{
+                border-radius: 32px;
+                background-color: $primary-color;
+                width: 100%;
+                height: 1.6rem;
+                margin-top: 2.4rem;
+            }
+        }
+    }
+}

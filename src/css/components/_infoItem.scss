@@ -1,0 +1,49 @@
+.infoItem{
+    border-radius: 2.4rem;
+    border: 1px solid #EAEAEA;
+    background: #FFF;
+    padding: 3.2rem;
+    transition: all .3s linear;
+
+    &:hover{
+        transform: translateY(5px);
+    }
+
+    &__icon{
+        border-radius: 1.3rem;
+        border: 1px solid #EAE9F5;
+        background: #FFF;
+        padding: 1.6rem 1.8rem;
+        width: auto;
+        display: inline-block;
+        margin-bottom: 2.3rem;
+    }
+    h4{
+        @include font($ism,1.8rem,#434350,normal);
+        margin-bottom: .8rem;
+    }
+    p{
+        @include font($ir,1.4rem,#000,170%);
+        letter-spacing: 0.28px;
+        margin-bottom: 2.3rem;
+    }
+
+    &__btn{
+        border-radius: 2.8rem;
+        border: 1px solid rgba(35, 83, 255, 0.30);
+        backdrop-filter: blur(2px);
+        display: block;
+        padding: .8rem 1.6rem;
+        @include font($im,1.2rem,$primary-color,normal);
+        transition: all .3s ease-in-out;
+
+        img{
+            margin-right: .8rem;
+        }
+    }
+
+    &:hover &__btn{
+        color: #fff;
+        background-color: $secondary-color;
+    }
+}

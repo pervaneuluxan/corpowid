@@ -30,6 +30,15 @@ let path = {
         fonts: 'build/fonts/',
         libs: 'build/libs/' //bower ile src klasörüne yüklediğim dosyaları build klasörüne eklemek için
     },
+    // build: { //Burada işlemden sonra bitmiş dosyaların nereye koyulacağını gösteriyoruz
+    //     html: 'build/',
+    //     js: '../../../backend/C/corpowid/themes/corpowid/assets/js/',
+    //     vendor: '../../../backend/C/corpowid/themes/corpowid/assets/js/vendor/', //src deki vendor klasörünü buildeki vendor klasörüne eklemek için
+    //     css: '../../../backend/C/corpowid/themes/corpowid/assets/css/main/',
+    //     images: '../../../backend/C/corpowid/themes/corpowid/assets/img/',
+    //     fonts: '../../../backend/C/corpowid/themes/corpowid/assets/fonts/',
+    //     libs: '../../../backend/C/corpowid/themes/corpowid/assets/libs/' //bower ile src klasörüne yüklediğim dosyaları build klasörüne eklemek için
+    // },
     src: { //Burası kaynaklar
         html: 'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
         js: 'src/js/main/**/*.js',

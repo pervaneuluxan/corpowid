@@ -1,15 +1,139 @@
-      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-      <script>window.jQuery || document.write('<script src="libs/jquery/dist/jquery.min.js"><\/script>')</script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-      <script src="libs/bootstrap/dist/js/bootstrap.min.js" type="text/javascript" charset="utf-8" async defer></script>
-      
-      <script src="js/all.min.js"></script>
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="container">
+                <div class="row footer__top">
+                    <div class="col-lg-3">
+                        <a href="" class="footer__logo">
+                            <img src="./img/footer-logo2.svg" alt="">
+                        </a>
 
-      <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-      <script>
-        window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-        ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
-    </script>
-    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
-</body>
-</html>
+                        <p>Risus faucibus quis orci fames ac sit pulvinar elementum at.</p>
+                        <p>
+                            <span>Email:</span> <a href="mailto:info@accesimate.com">info@accesimate.com</a>
+                        </p>
+                       
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="footer__list">
+                            <a href="./index.html" class="footer__link">
+                                Mainpage
+                            </a>
+                            <a href="" class="footer__link">
+                                Contact
+                            </a>
+                            <a href="" class="footer__link">
+                                About Us
+                            </a>
+                            <a href="" class="footer__link">
+                               Price
+                            </a>
+                            <a href="./blog.html" class="footer__link">
+                                Blog
+                             </a>
+                             <a href="./presentation.html" class="footer__link">
+                                Presentation
+                             </a>
+                        </div>
+
+                        <div>
+                            <a href="/free" class="button button-secondary"><span>Try Widget</span></a>
+
+                            <a href="" class="button button-primary light modalOpen">
+                                <span>Request a Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row footer__bottom">
+                   <div class="col-lg-12">
+                        <p class="copyright">
+                            © 2024 AccesiMate. All rights reserved.
+                        </p>
+
+                        <div class="footer__social">
+                            <span>Folluw us on social media:</span>
+                            <div>
+                                <a href="https://www.facebook.com/profile.php?id=61556376189759" target="_blank">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                  </a>
+                                  
+                            </div>
+                        </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="offerModal">
+    <div class="offerModal__center">
+        <div class="videoBox">
+            <div class="videoLayer">
+                <img src="./img/Popup_left_photo_banner.jpg" class="videoImg" alt="">
+                <a href="javascript:void(0)" class="videoBtn">
+                    <img src="./img/video-play.svg" alt="">
+                </a>
+
+            </div>
+            <div class="videoPlayer">
+                <video width="100%" height="100%" controls>
+                    <source src="movie.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                  Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <div class="contactBox">
+            <a href="" class="offerModal__close">
+                &times;
+            </a>
+            <form action="">
+                <div class="form-group">
+                    <label for="">Name Surname <span>*</span></label>
+                    <input type="text" class="form-control" name="" id="" placeholder="Enter Fullname">
+                </div>
+                <div class="form-group">
+                    <label for="">E-Mail <span>*</span></label>
+                    <input type="email" class="form-control" name="" id="" placeholder="Enter Email address">
+                </div>
+                <div class="form-group">
+                    <label for="">Company name</label>
+                    <input type="text" class="form-control" name="" id="" placeholder="Enter Company name">
+                </div>
+                <div class="form-group">
+                    <label for="">Phone number <span>*</span></label>
+                    <input type="text" class="form-control" name="" id="phone" placeholder="Enter Phone number">
+                </div>
+                <div class="form-group">
+                    <label for="">Message</label>
+                    <textarea name="" id="" cols="30" class="form-control" rows="10" placeholder="Enter Message"></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="button button-secondary"><span>get contact</span></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="fixedBanner">
+    <a href="" class="fixedBanner__close">
+        <img src="./img/fixedclose.svg" alt="">
+    </a>
+    <div class="fixedBanner__left">
+        <h3 class="fixedBanner__title">
+            Use keyboard shortcut to start accessibility widget
+        </h3>
+        <p>
+            Keyboard shortcut usage of the widget for users with visual impairments, age-related or temporary physical limitations.
+        </p>
+    </div>
+    <div class="fixedBanner__right">
+        <img src="./img/fixedicon1.svg" alt="">
+        <span>+</span>
+        <img src="./img/fixedicon2.svg" alt="">
+    </div>
+</div>

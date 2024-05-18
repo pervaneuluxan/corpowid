@@ -1,0 +1,103 @@
+.featureItem{
+    padding: 3.1rem 2.1rem 2.1rem 2.1rem;
+    border-radius: 13px;
+    border: 1px solid #00A3FF;
+    background: #FFF;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+
+    &::after{
+        z-index: 1;
+        position: absolute;
+        content: '';
+        border-radius: 13px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border: 1px solid #00A3FF;
+        transition: all .3s ease-in-out;
+        visibility: hidden;
+        opacity: 0;
+        background: var(--gradinet-mavi, linear-gradient(180deg, #2353FF 0%, #00A3FF 100%));
+    }
+
+    .icon{
+        position: relative;
+        width: 6rem;
+        height: 6rem;
+
+        img{
+            position: absolute;
+            width: 100%;
+            object-fit: cover;
+            transition: all .3s ease-in-out;
+
+            &:first-child{
+                z-index: 2;
+            }
+        }
+    }
+
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 4rem;
+        z-index: 2;
+    }
+
+    .count{
+        @include font($ib,5rem,rgba(35, 83, 255, 0.20),normal);
+        position: relative;
+        z-index: 2;
+        transition: all .3s ease-in-out
+    }
+
+    h5{
+        @include font($ism,2.6rem,#11023B,normal);
+        margin-bottom: 1.3rem;
+        position: relative;
+        z-index: 2;
+        
+    }
+
+    p{
+        margin-bottom: 0;
+        @include font($ir,1.6rem,#11023B,150%);
+        font-size: 1.6rem!important;
+        position: relative;
+        z-index: 2;
+    }
+
+    &:hover .count{
+        color: rgba(255, 255, 255, 0.20);
+
+
+    }
+
+    &:hover p,&:hover h5{
+        color: #fff;
+    }
+
+    &:hover .icon img:first-child{
+        z-index: 0;
+    }
+    &:hover .icon img:nth-child(2){
+        z-index: 2;
+    }
+
+    &:hover::after{
+        visibility: visible;
+        opacity: 1;
+    }
+
+}

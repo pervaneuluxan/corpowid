@@ -1,0 +1,27 @@
+.colorSection{
+    padding-bottom: 15rem;
+    margin-top: -75rem;
+
+    @include respondmax(lg){
+        padding-bottom: 6rem;
+    }
+
+    .row{
+        align-items: center;
+    }
+
+   &__left{
+        position: relative;
+        display: flex;
+        align-items: center;
+   }
+
+   .content{
+    padding-left: 8rem;
+
+    @include respondmax(lg){
+        padding-left: 0;
+    }
+   }
+
+}

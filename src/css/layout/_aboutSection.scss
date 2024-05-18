@@ -1,0 +1,34 @@
+.aboutSection{
+    padding-top: 8rem;
+    margin-top: -74rem;
+
+    @include respondmax(lg){
+        padding-top: 0;
+    }
+
+    @include respondmax(lg){
+        margin-top: -5rem;
+    }
+
+    .row{
+        img{
+            object-fit: cover;
+            width: 100%;
+        }
+     }
+
+   .content {
+
+    padding-right: 5rem;
+
+    @include respondmax(lg){
+        padding-right: 0;
+    }
+
+  
+   
+        .button:last-child{
+                margin-left: 0;
+        }
+    }
+}

@@ -1,0 +1,302 @@
+.main{
+    &Slider{
+        position: relative;
+        padding-top: 6rem;
+        background-image: url('../../img/contact-form-bcg.png');
+        background-size: cover;
+        padding-bottom: 110rem;
+
+        @include respondmax(lg){
+            padding-bottom: 8rem;
+        }
+
+        .row{
+            align-items: center;
+        }
+
+        .col-lg-5:last-child{
+            padding-right: 7rem;
+            padding-left: 4rem;
+        }
+        &Img{
+            position: relative;
+            width: 100%;
+            height: 57rem;
+            padding-bottom: 3rem;
+
+            @include respondmax(lg){
+                display: none;
+            }
+    
+            img{
+                position: absolute;
+                background: transparent!important;
+                
+    
+                &:first-child{
+                    left: -5rem;
+                    top: -2rem;
+                    z-index: 1;
+                    animation: move 4.4s ease-in-out infinite;
+                }
+                &:nth-child(2){
+                    right: -5rem;
+                    top: 2rem;
+                    z-index: 1;
+                    animation: move 4.4s 2s ease-in-out infinite;
+                }
+
+                &:nth-child(3){
+                    top: 19rem;
+                    left: 0;
+                    z-index: 0;
+                }
+                &:nth-child(4){
+                    top: 19rem;
+                    right: 0;
+                    z-index: 0;
+                }
+                &:nth-child(5){
+                    bottom: -7rem;
+                    z-index: 10;
+                    left: 5rem;
+                    animation: moveSmall 4.4s ease-in-out infinite;
+                }
+            }
+        }
+
+        @include respondmax(lg){
+            padding-top: 0;
+        }
+
+        &::before{
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 41%;
+            background-image: url('../../img/mainSlider-bcg.png');
+            background-size: cover;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 15%;
+            z-index: 0;
+
+
+            @include respondmax(lg){
+                width: 100%;
+                left: 0;
+            }
+        }
+
+            p{
+                @include font($ir,1.6rem,#000,160%);
+                margin-bottom: 0;
+                max-width: 70%;
+
+                @include respondmax(lg){
+                    text-align: center;
+                    max-width: 100%;
+                }
+            }
+
+            .button{
+                margin-top: 4rem;
+                margin-bottom: 2rem;
+            }
+ 
+    }
+
+    &Carousel{
+        width: 100%;
+
+        &__left{
+            height: 100%;
+        }
+
+        &__cell{
+            height: 50rem;
+            // transform: translateX(0);
+            width: 100%;
+            // transition: all .6s ease-in-out;
+        }
+        
+        .flickity-slider > .is-selected {
+            pointer-events: auto;
+            z-index: 1;
+            height: 100%;
+        }
+
+        &__left{
+           @include respondmax(lg){
+                display: flex;
+                flex-direction:  column;
+                justify-content: center;
+                align-items: center;
+           }
+        }
+        .flickity-button{
+            border-radius: 32px;
+            background: $primary-color;
+            padding: 1.4rem 1.9rem;
+            opacity: 1!important;
+            width: 5.4rem;
+            height: 4rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            top: auto;
+            bottom: 6rem;
+
+            &:focus{
+                box-shadow: unset;
+            }
+
+            @include respondmax(lg){
+                display: none;
+            }
+
+            svg{
+                display: none;
+            }
+
+            &.previous{
+                background-image: url('../../img/arrow-left.svg');
+                left: 0;
+            }
+            &.next{
+                background-image: url('../../img/arrow-right.svg');
+                right: auto;
+                left: 6rem;
+            }
+        }
+
+
+        @include respondmax(lg){
+            width: 100%;
+        }
+
+        &-btns{
+            width: 54%;
+            position: absolute;
+            right: -7%;
+            top:50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-wrap: wrap;
+            border-radius: 35.565px;
+            padding: 3.556rem;
+            padding-bottom: 1.8rem;
+            border: 0.847px solid #E9E9E9;
+            background: #FFF;
+            box-shadow: 0px 8.47px 17.787px 0px rgba(0, 0, 0, 0.10), 0px 33.033px 33.033px 0px rgba(0, 0, 0, 0.09), 0px 73.69px 44.044px 0px rgba(0, 0, 0, 0.05), 0px 131.286px 52.515px 0px rgba(0, 0, 0, 0.01), 0px 205.823px 57.597px 0px rgba(0, 0, 0, 0.00);
+
+            @include respondmax(lg){
+                position: relative;
+                width: 1.8rem;
+                top: auto;
+                transform: unset;
+                right: auto;
+                width: 38.8rem;
+                margin-right: auto;
+                margin-left: auto;
+                padding: 1.6rem;
+                padding-bottom:0;
+                margin-top: 3.7rem;
+                margin-bottom: 9rem;
+            }
+
+            @media(max-width:400px){
+                width: 90%;
+            }
+
+            .item{
+                border-radius: 20.328px;
+                border: 1.694px solid rgba(54, 54, 54, 0.10);
+                background: #FFF;
+                padding: 2.71rem;
+                width: calc((100% - 5.325rem) / 4);
+                margin-bottom: 1.775rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: all .3s linear;
+                cursor: pointer;
+
+                @include respondmax(lg){
+                    width: calc((100% - 1.4rem) / 2);
+                    margin-bottom: 1.4rem;
+                }
+
+                &:hover,&.active{
+                    border-radius: 20.328px;
+                    border: 1.694px solid #0795FF;
+                    background: #FFF;
+                    box-shadow: 0px 7.623px 16.94px 0px rgba(0, 0, 0, 0.10), 0px 30.492px 30.492px 0px rgba(0, 0, 0, 0.09), 0px 69.455px 41.503px 0px rgba(0, 0, 0, 0.05), 0px 122.816px 49.127px 0px rgba(0, 0, 0, 0.01), 0px 191.424px 53.362px 0px rgba(0, 0, 0, 0.00);
+                }
+                
+
+                &:not(:nth-child(4n)){
+                    margin-right: 1.775rem;
+
+                    @include respondmax(lg){
+                        margin-right: 0;
+                    }
+                }
+
+                &:not(:nth-child(2n)){
+                    margin-right: 1.4rem;
+                }
+
+                .icon{
+                    border-radius: 11.011px;
+                    border: 0.847px solid #EAE9F5;
+                    background: #FFF;
+                    padding: 1.65rem .932rem;
+                    width: 5.5rem;
+                    height: 5.2rem;
+                    position: relative;
+                    margin-bottom: 2.33rem;
+                    box-shadow: 0px 0.847px 0.847px 0px rgba(120, 120, 120, 0.10), 0px 1.694px 1.694px 0px rgba(120, 120, 120, 0.09), 0px 4.235px 2.541px 0px rgba(120, 120, 120, 0.05), 0px 8.47px 3.388px 0px rgba(120, 120, 120, 0.01), 0px 12.705px 3.388px 0px rgba(120, 120, 120, 0.00);
+                    
+                    img{
+                        position: absolute;
+                        @include absCenter;
+                        transition: all .3s linear;
+
+                        &:first-child{
+                            z-index: 2;
+                        }
+                    }
+                }
+                
+                &.active .icon img,
+                &:hover .icon img{
+                    &:last-child{
+                        z-index: 2;
+                    }
+                }
+
+                h4{
+                    @include font($ism,1.3552rem,#434350,normal);
+                }
+            }
+
+        }
+    }
+}
+
+html[lang="ru"] .mainSlider .page-title{
+    font-size: 4.2rem;
+
+    @include respondmax(lg){
+        font-size: 3.2rem;
+    }
+}
+html[lang="ru"] .mainSlider .page-title span{
+    font-size: 4.2rem;
+
+    @include respondmax(lg){
+        font-size: 3.2rem;
+    }
+}
